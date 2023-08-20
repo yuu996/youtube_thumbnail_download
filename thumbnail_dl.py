@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 import requests
 
 # YouTube Data API v3を初期化
-api_key = 'AIzaSyBI70xk9YKm8zKT91oEoJ_tWNLn-O5wilw'
+api_key = 'your api key'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 def get_playlist_video_ids(playlist_id):
@@ -73,6 +73,6 @@ if __name__ == '__main__':
     video_ids = get_playlist_video_ids(playlist_id="PLnxIuXySyoibyDJtvzxklXJTX3__yft7d")
     for ids in video_ids:
         print(f"サムネイルのダウンロードを開始しました。\nvideo_id = {ids}")
-        get_video_thumbnail(video_id=ids, output_dir='E:\歌も歌ってるよ～！')
+        get_video_thumbnail(video_id=ids, output_dir='path')
         print(f"サムネイルのダウンロードを終了しました。\nvideo_id = {ids}")
 
