@@ -71,8 +71,10 @@ def get_video_thumbnail(video_id, output_dir):
 
 if __name__ == '__main__':
     video_ids = get_playlist_video_ids(playlist_id="PLnxIuXySyoibyDJtvzxklXJTX3__yft7d")
+    print("===========================================================================")
     for ids in video_ids:
         print(f"サムネイルのダウンロードを開始しました。\nvideo_id = {ids}")
         get_video_thumbnail(video_id=ids, output_dir='path')
         print(f"サムネイルのダウンロードを終了しました。\nvideo_id = {ids}")
+        print("===========================================================================")
 
